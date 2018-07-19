@@ -1,9 +1,13 @@
-@Library('pipeline-library-demo')_
+@Library('pipeline-library-demo') _
 
-stage('Demo') {
-
-  echo 'Hello World'
-
-  sayHello 'Dave'
-
+pipeline {
+    agent none
+    stage ('Example') {
+        steps {
+             script { 
+                 log.info 'Starting'
+                 log.warning 'Nothing to do!'
+             }
+        }
+    }
 }
